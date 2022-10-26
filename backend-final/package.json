@@ -1,0 +1,29 @@
+{
+  "name": "backend-final",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app",
+    "dev": "nodemon src/app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonathansansok/back-ender.git"
+  },
+  "keywords": [],
+  "author": "Jonathan Sansó",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jonathansansok/back-ender/issues"
+  },
+  "homepage": "https://github.com/jonathansansok/back-ender#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.1",
+    "firebase-admin": "^11.2.0",
+    "mongoose": "^6.6.5"
+  }
+}
