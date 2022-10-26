@@ -22,7 +22,7 @@ app.use(express.urlencoded({extended:true}));
 const uri = `mongodb+srv://jsanso:<React100>@jsanso.kmkwg9v.mongodb.net/?retryWrites=true&w=majority`;
 mongoose.connect(uri)
 
-//TAMBIEN lo use con:
+//TAMBIEN lo use cmd conmongo shell:
 //const uri = `mongosh "mongodb+srv://jsanso.kmkwg9v.mongodb.net/myFirstDatabase" --apiVersion 1 --username jsanso`;
 //usuario jsanso
 //clave React100
