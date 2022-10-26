@@ -21,6 +21,15 @@ app.use(express.urlencoded({extended:true}));
 //// Conexión MongoDB
 const uri = `mongodb+srv://jsanso:<React100>@jsanso.kmkwg9v.mongodb.net/?retryWrites=true&w=majority`;
 mongoose.connect(uri)
+
+//TAMBIEN lo use con:
+//const uri = `mongosh "mongodb+srv://jsanso.kmkwg9v.mongodb.net/myFirstDatabase" --apiVersion 1 --username jsanso`;
+//usuario jsanso
+//clave React100
+//db ecommerce
+//colecciones productos y carts
+
+mongoose.connect(uri)
   .then( () => console.log('BD Conectada'))
   .catch( err => console.log(err))
 
