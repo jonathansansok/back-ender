@@ -21,13 +21,13 @@ const validarInputsProduct = (req,res,next) => {
 
 router.get('/', async (req, res) => {
   try {
-      // Con MongoDB
-    //let result = await CartControllerMONGO.getAll()
-    //return res.status(200).send(result); 
+       //Con MongoDB
+    let result = await CartControllerMONGO.getAll()
+    return res.status(200).send(result); 
 
     // Con FIRESTORE    
-    let result = await CartControllerFIRESTORE.getAll();
-    return res.status(200).send(result); 
+    //let result = await CartControllerFIRESTORE.getAll();
+    //return res.status(200).send(result); 
 
   } catch (error) {
     return res.status(404).send({status:'ERROR', result: error.message});
@@ -44,12 +44,12 @@ router.get('/:id/productos', async (req, res) => {
     //res.send({status: 'OK', result: respuesta.result});    
 
     // Con MongoDB
-    //let result = await CartControllerMONGO.getById(id);    
-    //return res.status(200).send(result); 
+    let result = await CartControllerMONGO.getById(id);    
+    return res.status(200).send(result); 
 
     // Con FIRESTORE    
-    let result = await CartControllerFIRESTORE.getById(id);
-    return res.status(200).send(result);
+    //let result = await CartControllerFIRESTORE.getById(id);
+    //return res.status(200).send(result);
   } catch (error) {
     return res.status(404).send({status:'ERROR', result: error.message});
   }
@@ -65,12 +65,12 @@ router.post('/',  async (req, res) => {
     //res.send(respuesta);
 
     // Con MongoDB    
-    //let result = await CartControllerMONGO.createCart(producto);
-    //return res.status(200).send(result);
+    let result = await CartControllerMONGO.createCart(producto);
+    return res.status(200).send(result);
 
     // Con FIRESTORE
-    let result = await CartControllerFIRESTORE.createCart(producto);
-    return res.status(200).send(result);
+    //let result = await CartControllerFIRESTORE.createCart(producto);
+    //return res.status(200).send(result);
     
   } catch (error) {
     return res.status(404).send({status:'ERROR', result: error.message}); 
@@ -87,12 +87,12 @@ router.delete('/:id', async (req, res) => {
     //res.send(respuesta);
 
     // Con MongoDB    
-    //let result = await CartControllerMONGO.delete(id);
-    //return res.status(200).send(result);  
+    let result = await CartControllerMONGO.delete(id);
+    return res.status(200).send(result);  
 
     // Con FIRESTORE    
-    let result = await CartControllerFIRESTORE.deleteCart(id)
-    return res.status(200).send(result);  
+    //let result = await CartControllerFIRESTORE.deleteCart(id)
+    //return res.status(200).send(result);  
 
   } catch (error) {
     return res.status(404).send({status:'ERROR', result: error.message});
@@ -110,12 +110,12 @@ router.post('/:id/productos', async (req, res) => {
     //return res.status(200).send(respuesta);
 
     // Con MongoDB
-    //let result = await CartControllerMONGO.addProductToCart(id, producto)
-    //return res.status(200).send(result);
+    let result = await CartControllerMONGO.addProductToCart(id, producto)
+    return res.status(200).send(result);
 
     // Con FIRESTORE    
-    let result = await CartControllerFIRESTORE.addProductToCart(id, producto);
-    return res.status(200).send(result);
+    //let result = await CartControllerFIRESTORE.addProductToCart(id, producto);
+    //return res.status(200).send(result);
 
   } catch (error) {
     return res.status(404).send({status:'ERROR', result: error.message}); 
@@ -131,12 +131,12 @@ router.delete('/:id_cart/productos/:id_prod', async (req, res) => {
     //let respuesta = await cartContainer.deleteProdFromCart(id, id_prod);    
 
     // Con MongoDB
-    //let result = await CartControllerMONGO.deleteProductFromCart(id_cart, id_prod);
-    //return res.status(200).send(result);
+    let result = await CartControllerMONGO.deleteProductFromCart(id_cart, id_prod);
+    return res.status(200).send(result);
 
     // Con FIRESTORE    
-    let result = await CartControllerFIRESTORE.deleteProductFromCart(id_cart, id_prod);
-    return res.status(200).send(result);
+    // let result = await CartControllerFIRESTORE.deleteProductFromCart(id_cart, id_prod);
+    // return res.status(200).send(result);
 
   } catch (error) {
     return res.status(404).send({status:'ERROR', result: error.message});
